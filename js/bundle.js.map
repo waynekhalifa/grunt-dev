@@ -1,1 +1,0 @@
-{"version":3,"sources":["../scripts/app.js"],"names":["MobileMenu"],"mappings":";;AAAA;;;;AAEA,IAAIA,sBAAJ","sourcesContent":["import MobileMenu from './modules/MobileMenu';\r\n\r\nnew MobileMenu();"],"file":"bundle.js"}
