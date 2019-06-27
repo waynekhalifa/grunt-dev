@@ -1,0 +1,12 @@
+@mixin menu-toggle($bar-height, $bar-space, $color){
+    cursor: pointer;
+    div{
+        width: 100%;
+        height: $bar-height;
+        margin-bottom: $bar-space;
+        background: $color;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

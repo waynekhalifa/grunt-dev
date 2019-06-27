@@ -1,0 +1,34 @@
+.project-gallery{
+    @include breakpoint($bp-desktop){
+        height: 960px !important;
+    }
+    .lSAction{
+        .lSPrev{
+            background-position: 0 0;
+            left: 10px;
+            a{
+                width: 32px;
+                display: block;
+                top: 50%;
+                height: 32px;
+                background-image: url(../img/controls.png);
+                cursor: pointer;
+                position: absolute;
+                z-index: 99;
+                margin-top: -16px;
+                opacity: .5;
+                -webkit-transition: opacity .35s linear 0s;
+                transition: opacity .35s linear 0s; 
+            }
+            }
+        }
+    }
+
+    .lSSlideOuter .lSPager.lSGallery{
+        margin-left:25px !important;
+        margin-right:25px !important;
+        @include breakpoint($bp-desktop){
+            margin-left:60px !important;
+            margin-right:60px !important;  
+        }
+    }

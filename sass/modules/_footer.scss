@@ -1,0 +1,94 @@
+.footer-widgets{
+    background-color: #333;
+    padding-top: 20px;
+    text-align: center;
+    @include breakpoint ($bp-tablet){
+        text-align: unset;
+    }
+}
+.map{
+    //background: #fff;
+    @include breakpoint ($bp-desktop){
+    //text-align: center;
+    }
+    a{
+        color: #A3A491;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        font-family: 'Tajawal', sans-serif;
+        &:hover{
+        @include transition-time(.3s, ease-out);
+        color:#fff;
+        }
+    }
+}
+.copyrights{
+    padding-top: 0px;
+    padding-bottom: 15px;
+    @include breakpoint($bp-tablet){
+    //padding-top: 215px;
+    padding-bottom: 0px;
+    }
+p{
+    color: #A3A491;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Tajawal', sans-serif;
+    padding-top: 10px;
+    @include breakpoint($bp-tablet){
+        text-align: center;
+    }
+} 
+}
+.footer-social-network{
+    .social-networks{
+        border-bottom: solid 1px #A3A491;
+    }
+    padding-top:15px;
+    @include breakpoint($bp-tablet){
+        padding-top: 0px;
+    }
+    ul{
+        @include breakpoint ($bp-tablet){
+            text-align: center;
+        }
+        li{
+            font-size: 20px;
+            @include breakpoint($bp-desktop){
+            font-size: 25px; 
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+    //social-links style
+    .icon-facebook{
+        background: #3b5998;
+        color: #fff;
+        padding: 9px 13px 8px 13px;
+        border-radius: 22px;
+        @include breakpoint($bp-tablet){
+ 
+            padding:9px 13px 8px 13px ;
+        }
+    }
+    .icon-youtube{
+        background: red;
+        color: #fff;
+        padding: 8px 6px 8px 8px;
+        border-radius: 22px;
+    }
+}
+}
+.company{
+        padding-top: 0px;
+    p{
+        color: #A3A491;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        font-family: 'Tajawal', sans-serif;
+    }
+}

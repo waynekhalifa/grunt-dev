@@ -1,0 +1,116 @@
+.posts{
+    .post{
+        position: relative;
+        box-shadow: $box-shadow;
+        line-height: 1.375;
+        margin-bottom: 20px;
+        @include breakpoint($bp-tablet){
+            margin-bottom: 30px;
+        }
+        @include breakpoint($bp-desktop){
+            margin-bottom: 40px;
+        }
+        position: relative;
+        img{
+            display: block;
+        }
+        .layover{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,.4);
+            color: #FFF;
+            padding: 30px;
+            padding-top: 80px;
+            @include transition-time(.2s, ease-in);
+            &:hover{
+                background: rgba(0,0,0,.6);
+            }
+        }
+        .books-download-btn{
+            position: absolute;
+            bottom: 30px;
+            @include position-right(5px);
+            a{
+                position: static;
+                top:70%;
+                left:55%;
+                color: #fff;
+                background-color: #67C8C2;
+                padding: 10px;
+                &:hover{
+                    background: #fff;
+                    color: #111111; 
+                }
+                @include breakpoint($bp-tablet){
+                    top:75%; 
+                    padding: 10px;
+                }
+                @include breakpoint($bp-desktop){
+                    top:75%; 
+                    padding: 15px;
+                }
+            }
+        }
+        .category{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            left: 30px;
+            li{
+                display: inline-block;
+                a{
+                    @include link-style(#FFF, $primary-fcolor);
+                    display: block;
+                    text-transform: uppercase;
+                    padding: 7px 14px;
+                    font-size: 12px;
+                }
+                &.icon-wrap{
+                    width: 28px;
+                    height: auto;
+                }
+                &.name{
+                    position: relative;
+                    top: -10px;
+                    background: $main-color;
+                    border-radius: 20px;
+                    margin: 0 5px;
+                    @include transition-time(.2s, ease-in);
+                    &:hover{
+                        background: #FFF;
+                    }
+                }
+            }
+        }
+        .title{
+            color: #FFF;
+            text-align: inherit;
+        }
+        .meta{
+            position: absolute;
+            bottom: 30px;
+            li{
+                display: inline-block;
+                &:first-child{
+                    width: 24px;
+                    height: auto;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: relative;
+                    top: 5px;
+                    img{
+                        display: block;
+                    }
+                }
+                &:nth-child(2n){
+                    margin: 0 5px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}

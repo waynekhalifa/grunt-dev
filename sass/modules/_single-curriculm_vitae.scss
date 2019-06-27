@@ -1,0 +1,22 @@
+.cv{
+    min-height: 250px;
+    background: #fff;
+    padding: 20px;
+    .cv-title{
+        text-align: center;
+    }
+    .cv-cont{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 10px;
+        p{
+            font-family: 'Lateef', cursive;
+        }
+        @include breakpoint($bp-desktop){
+            min-height: 410px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 25px;
+        }
+    }
+}

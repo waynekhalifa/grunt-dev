@@ -1,0 +1,150 @@
+.single-post{
+    margin:20px 0px;
+    @include breakpoint($bp-tablet){
+        margin:30px 0px;   
+    }
+    .entry-wrap{
+        box-shadow: $box-shadow;
+        background: #FFF;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .entry-header{
+            padding: 15px 20px 0px 20px;
+            @include breakpoint ($bp-desktop){
+                padding: 25px 60px 0px 60px;   
+            }
+            .category{
+                margin-bottom: 12px;
+                li{
+                    display: inline-block;
+                    a{
+                        @include link-style(#FFF, #fff);
+                        display: block;
+                        text-transform: uppercase;
+                        padding: 7px 14px;
+                        font-size: 12px;
+                    }
+                    &.name{
+                        background: $main-color;
+                        border-radius: 20px;
+                        @include transition-time(.2s, ease-in);
+                        &:hover{
+                            background: $primary-fcolor;
+                        }
+                    }
+                }
+            }
+            .title{
+                margin-bottom: 15px;
+                text-transform: capitalize;
+            }
+            .meta{
+                li{
+                    display: inline-block;
+                    &:first-child{
+                        width: 24px;
+                        height: auto;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        position: relative;
+                        top: 5px;
+                        img{
+                            display: block;
+                        }
+                    }
+                    &:nth-child(2n){
+                        margin: 0 5px;
+                        text-transform: capitalize;
+                    }
+                }
+                .download-book{
+                    position: absolute;
+                    left:25px;
+                    @include breakpoint($bp-desktop){                        
+                        position: static;
+                        margin-bottom: 20px !important;
+                        float: left;
+                        margin-top: 5px !important;
+                    }
+                    a{
+                            color:#fff;
+                            background-color: $main-color;
+                            padding: 10px; 
+                            @include breakpoint($bp-tablet){
+                                padding: 10px;
+                                padding-right: 50px;
+                                padding-left: 50px;   
+                            }
+                            @include breakpoint ($bp-desktop){
+                                padding: 15px; 
+                                padding-right: 50px;
+                                padding-left: 50px;   
+                            }
+                            &:hover{
+                                color: $main-color;
+                                background-color: #fff;
+                                border :solid 1px $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .thumb{
+            margin-top: 40px;
+        }
+        .entry-content{
+            padding: 15px 20px 20px;
+            background: #fff;
+            overflow: hidden;
+            font-family: 'Lateef', cursive;
+            @include breakpoint ($bp-desktop){
+                padding: 40px 60px 50px;   
+            }
+        }
+    }
+    .book-thumb{
+        //background: #ffffff;
+        font-size: 14px;
+        margin-top:20px;
+        @include breakpoint($bp-desktop){
+            margin-top:0px;   
+        } 
+    }
+    .categories{
+        background: #ffffff;
+        font-size: 14px;
+        line-height: 1.43;
+        box-shadow: $box-shadow;
+        margin-top:20px;
+        @include breakpoint($bp-desktop){
+            margin-top:0px;   
+        }
+        h4{
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            padding: 15px 20px 15px;
+            margin-bottom: 0;
+            @include breakpoint($bp-desktop){
+                padding: 25px 30px 0;    
+            }
+        }
+        .terms{
+            padding: 0px 25px;
+            @include breakpoint ($bp-desktop){
+                padding: 20px 30px;
+            }
+            li {
+                border-bottom: solid 1px $border-color;
+                a{
+                    padding: 10px 0;
+                    display: block;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

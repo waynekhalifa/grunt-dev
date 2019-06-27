@@ -1,0 +1,29 @@
+.cv{
+    .cv-title{
+        h1{
+            color: #999999;
+        }
+    }
+}
+.about-us{
+    margin-top:40px;
+    margin-bottom: 20px;
+    .title{
+        text-align: center;
+        padding-bottom: 20px;
+        h1{
+        //font-family: 'cabin' , 'open-sans';
+        }
+    }
+    .content{
+        background: #fff;
+        p{
+            padding: 15px;
+            padding-top: 0px;
+            font-family: 'Lateef', cursive;
+            @include breakpoint ($bp-tablet){
+                padding: 20px;   
+            }
+        }
+    }
+}

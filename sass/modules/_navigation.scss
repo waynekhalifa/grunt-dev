@@ -1,0 +1,181 @@
+.main-navigation{
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    padding: 10px;
+    background: $body-bcolor;
+    overflow: scroll;
+    &.expanded{
+        display: block;
+    }
+    .mobile-social-links{
+    text-align: center;
+    display: block;
+    background: #fff;
+    font-size: 7px;
+    padding-top: 10px;
+    box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.1);
+    @include padding-left(10px);
+    //padding-left: 10px;
+    .icon-facebook{
+        background: #3b5998;
+        color: #fff;
+        padding:9px 11px 8px 12px ;
+        border-radius: 15px;
+        @include breakpoint($bp-tablet){
+ 
+            padding:9px 13px 8px 13px ;
+        }
+    }
+ 
+    .icon-youtube{
+        background: red;
+        color: #fff;
+        padding: 8px 6px 8px 8px;
+        border-radius: 15px;
+    }
+    
+    @include breakpoint($bp-desktop){
+        display: none;
+    }
+    }
+    @include breakpoint($bp-desktop){
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        padding: 0;
+        background: #fff;
+        margin-top: 10px;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        overflow: visible;
+    }
+    .menu{
+        background: #fff;
+        box-shadow: $box-shadow;
+        @include breakpoint($bp-desktop){
+            box-shadow: none;
+        }
+        .menu-item-object-custom, .menu-item-object-archive{
+            cursor: default !important;
+        }
+        .menu-item-object-page{
+                background: #9fefe7;
+                //border-radius: 10px;
+                height: auto;
+                @include breakpoint($bp-desktop){
+                    height: 47px;
+                }
+                a{
+                &:hover{
+                    color:#fff !important;
+                }
+            }
+            
+        }
+        #menu-item-223, #menu-item-357 {
+                background: #e6e6e6;
+                //border-radius: 10px;
+                padding-right: 0px;
+                padding-top: 0px;
+                height: auto;
+                margin-top: 10px;
+                @include breakpoint($bp-desktop){
+                    height: 47px;
+                    margin-top: 0px;
+                }
+                a{
+                    &:hover{
+                        color:$main-color !important;
+                    }
+
+                }
+                &.current-menu-item{
+                    a{
+                        color:#40e0d0 !important;
+                    }
+                }
+        }
+    }
+    .menu-item{
+        display: block;
+        position: relative;
+        &:last-child{
+            a{
+                //border-bottom: none;
+                @include breakpoint($bp-desktop){
+                    @include padding-left(15px);
+                    
+                }
+            }
+        }
+        @include breakpoint($bp-desktop){
+            display: inline-block;
+            &:hover{
+                .sub-menu{
+                    display: block;
+                }
+            }
+        }
+        a{
+            //margin: 0 15px;
+            line-height: 40px;
+            height: 40px;
+            display: block;
+            @include link-style($primary-fcolor, $main-color);
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 700;
+            text-transform: capitalize;
+            border-bottom: solid 1px $border-color;
+            @include padding-left(10px);
+            @include breakpoint($bp-desktop){
+                padding: 6px 15px;
+                height: 50px;
+                display: inline-block;
+                margin: 0;
+                border-bottom: none;
+                //padding-left: 0px;
+            }
+        }
+        .sub-menu{
+            display: none;
+            &.expanded{
+                display: block;
+            }
+            @include breakpoint($bp-desktop){
+                position: absolute;
+                z-index: 3;
+                top: 50px;
+                width: 200px;
+                background: #FFF;
+                border: solid 1px $border-color;
+            }
+            li{
+                padding: 0px 10px;
+                a{
+                    font-size: 14px;
+                    display: block;
+                    line-height: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }    
+}
+
+.current-menu-item > a,
+.current_page_item > a,
+.current-menu-ancestor > a,
+.current_page_ancestor > a {
+    color: $main-color !important;
+}
+.current_page_item > a {
+    color: #fff !important;
+}

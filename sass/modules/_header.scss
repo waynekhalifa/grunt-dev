@@ -1,0 +1,147 @@
+.site-header{
+    background: #FFF;
+    position: relative;
+    box-shadow: $box-shadow;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    &.myfixed{
+        background: #FFF!important;
+    }
+    .topbar{
+        margin-bottom: 10px;
+        .social-links{
+            display: none;
+            @include breakpoint($bp-tablet){
+                display: inline-block;
+                text-align: center;
+            }
+            .social-networks{
+                li{
+                    border-radius: 20px;
+                    font-size: 18px;
+                    margin-bottom: 0;
+                    padding: 0;
+                    line-height: 1;
+                    
+                    a{
+                        display: block;
+                        padding: 8px;
+                        color: #FFF;
+                    }
+                    &.facebook{
+                        background: #3b5998;
+                        display: block;
+                        text-align: center;
+                        @include breakpoint($bp-tablet){
+                            display: inline-block;
+                            a{
+                                padding: 8px 12px;
+                            }
+                        }
+                    }
+                    &.youtube{
+                        background: red;
+                        display: block;
+                        text-align:center;
+                        @include breakpoint($bp-tablet){
+                            display: inline-block;
+                            a{
+                                padding: 8px 9px 8px 10px ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .search-form{
+            @include placeholder($main-color, 'Lato', 16px, capitalize);
+            
+            input[type="text"]{
+                
+                @include input-style(transparent, $sec-fcolor, 2px, 100%);
+                border-radius: 50px !important;
+                border: solid 1px $main-color !important;
+                padding: 4px 10px;
+                line-height: 18px;
+                height: 25px;
+                font-size: 13px;
+                margin-top: 5px;
+                
+            }
+        }
+
+        .lang-switcher{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0px;
+            li{
+                a{
+                    line-height: 40px;
+                    height: 40px;
+                    font-weight: 700;
+                    @include link-style($primary-fcolor, $main-color);
+                }
+            }
+            @include breakpoint ($bp-desktop){
+                //justify-content: end;
+                margin-top: 0px;
+            }
+        }
+    }
+    .navbar{
+        .site-branding{
+            padding-bottom: 10px;
+            img{
+                display: block;
+                width: 158px;
+                height: auto;
+            }
+            @include breakpoint($bp-desktop){
+                padding-bottom: 0;
+            }
+        }
+        .open-menu{
+            margin-top: 22px;
+            @include menu-toggle(3px, 3px, $primary-fcolor);
+            @include breakpoint($bp-desktop){
+                display: none;
+            }
+        }
+        .close-menu{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: $sec-fcolor;
+            background: #FFF;
+            z-index: 2;
+            box-shadow: $box-shadow;
+            @include breakpoint($bp-desktop){
+                display: none;
+            }
+            &.expanded{
+                display: block;
+            }
+        }
+        .toggle-submenu{
+            i{
+                position: absolute;
+                z-index: 2;
+                @include position;
+                top: 0;
+                font-weight: 700;
+                color: $main-color;
+                line-height: 40px;
+                font-size: 25px;
+                @include breakpoint($bp-desktop){
+                    display: none;
+                }
+            }
+        }
+    }
+}

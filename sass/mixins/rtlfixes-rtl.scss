@@ -1,0 +1,18 @@
+
+@mixin position-left($value){
+    right: $value;
+}
+@mixin position-right($value){
+    left: $value;
+}
+@mixin padding-left($value){
+    padding-right: $value;
+}
+@mixin padding-right($value){
+    padding-left: $value;
+}
+
+
+
+
+
